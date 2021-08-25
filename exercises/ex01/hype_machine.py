@@ -4,7 +4,7 @@
 
 # TODO: Implement your program logic here
 
-__author__ = 730383737
+__author__ = "730383737"
 
 name: str = input("What is your name? ")
 print(name + ", you are my sunshine")
