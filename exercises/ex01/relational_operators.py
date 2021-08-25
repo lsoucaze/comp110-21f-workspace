@@ -1,3 +1,5 @@
+__author__ = 730383737
+
 lside: str = input("Number variable 1? ")
 rside: str = input("Number variable 2? ")
 lsint = int(lside)
