@@ -1,5 +1,10 @@
-# TODO: Write docstring here
+# TODO: These are three exercises to practice different coding operations.
 
-# TODO: Initialize __author__ variable here
+# TODO: __author__ = 730383737
 
 # TODO: Implement your program logic here
+
+name: str = input("What is your name? ")
+print(name + ", you are my sunshine")
+print("I'm so proud of you " + name + "!")
+print("breathe, " + name + " you're doing wonderfully <3")
