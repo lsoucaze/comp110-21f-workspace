@@ -14,8 +14,9 @@ if rep <= counter:
     print("No beat...")
 
 else:
+    counter = counter + 1
     while counter < rep:
-        final = beat + " " + beat_2
+        beat = beat + " " + beat_2
         counter = counter + 1
         
-    print(str(final) + " " + beat_2)
+print(str(beat))
