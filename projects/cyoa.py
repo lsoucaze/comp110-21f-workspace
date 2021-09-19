@@ -19,12 +19,13 @@ ROCKET_BASE = 4
 
 # Global Variables (0)
 points: int
-player = str("")
+player = str
 
 
 def main() -> None:
     """Pókemon Simulator!"""
     points = 0
+    player = ""
     round: int = 1
     greet()
     
