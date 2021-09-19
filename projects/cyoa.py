@@ -19,13 +19,12 @@ ROCKET_BASE = 4
 
 # Global Variables (0)
 points: int
-player = str
+player: str
 
 
 def main() -> None:
     """Pókemon Simulator!"""
     points = 0
-    player = ""
     round: int = 1
     greet()
     
@@ -107,6 +106,7 @@ def greet() -> None:
 
 def team_rocket(points_local: int) -> int:
     """Results in a random integer to 'defeat' Team Rocket."""
+    global player
     trainer_base = random.randint(0, 10)  # (6.2)
     print(f"\n{player} attack: {trainer_base} \nTeam Rocket defense: {ROCKET_BASE}")
 
