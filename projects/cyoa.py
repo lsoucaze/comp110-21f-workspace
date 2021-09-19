@@ -14,16 +14,17 @@ RAYQUAZA_TYPE_2 = "\U000026E9"
 METAGROSS_TYPE_1 = "\U0000269B"
 METAGROSS_TYPE_2 = "\U000026D3"
 
-#  Other named constants
+# Other named constants
 ROCKET_BASE = 4
+
+# Global Variables (0)
+points: int
+player = str("")
 
 
 def main() -> None:
     """Pókemon Simulator!"""
-    global points  # Global Variables (0)
     points = 0
-    global player
-    player = ""
     round: int = 1
     greet()
     
@@ -41,7 +42,7 @@ def main() -> None:
 
             if action_2 == "a":
                 print(f"\nCongratulations {player}, you caught an Eevee! {EEVEE_TYPE}")
-                evolution = input("Would you like to try for an eeveelution? Type yes or no: ")
+                evolution = input("Would you like to try for an eeveelution? If you do, it'll count as 2 pókemon! Type yes or no: ")
                 if evolution == "yes":
                     eeveelution_chance = random.randint(1, 8)
                     if eeveelution_chance == 1:
