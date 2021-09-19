@@ -1,6 +1,6 @@
 """Choose Your Own Adventure!"""
 
-__author__ = 730383737
+__author__ = "730383737"
 
 import random
 
