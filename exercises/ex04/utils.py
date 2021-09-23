@@ -42,6 +42,6 @@ def max(input: list[int]) -> int:
     
     while i < len(input):
         if input[i] >= value:
-            max: int = input[i]
+            value = input[i]
         i += 1
-    return max
+    return value
