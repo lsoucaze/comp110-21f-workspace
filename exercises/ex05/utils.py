@@ -20,7 +20,7 @@ def sub(x: list[int], begin: int, end: int) -> list[int]:
     if begin < 0:
         begin = 0
     if end > len(x):
-        end = len(x) - 1
+        end = len(x)
     if len(x) == 0 or begin > len(x) or end <= 0:
         return list_2 
 
