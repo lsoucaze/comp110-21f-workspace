@@ -24,7 +24,7 @@ schools.pop("Duke")
 
 # Test for the existence of a key
 if "Duke" in schools:
-    print("Foudn the key 'Duke' in schools")
+    print("Found the key 'Duke' in schools")
 else:
     print("No key 'Duke' in schools")
 

@@ -27,20 +27,20 @@ def test_invert_small_list() -> None:
 
 def test_favorite_color_same() -> None:
     """Edge case: Equal colors."""
-    color_list = {'Marc': 'Yellow', 'Ezri': 'Blue', 'Kris': 'Blue', 'Chris': 'Yellow', 'James': 'Blue', 'Lilly': 'Yellow'}
-    assert favorite_color(color_list) == "Yellow"
+    color_dict = {'Lilly': 'Pink', 'Marc': 'Red', 'Ezri': 'Blue', 'Kris': 'Blue', 'Chris': 'Red'}
+    assert favorite_color(color_dict) == "Red"
 
 
 def test_favorite_color_simple() -> None:
     """Use case: three entries."""
-    color_list = {'Marc': 'Yellow', 'Ezri': 'Blue', 'Kris': 'Blue'}
-    assert favorite_color(color_list) == "Blue"
+    color_dict = {'Marc': 'Yellow', 'Ezri': 'Blue', 'Kris': 'Blue'}
+    assert favorite_color(color_dict) == "Blue"
 
 
 def test_favorite_color_complex() -> None:
     """Use case: simple five entries."""
-    color_list = {'Marc': 'Yellow', 'Ezri': 'Blue', 'Kris': 'Blue', 'Chris': 'Yellow', 'James': 'Blue'}
-    assert favorite_color(color_list) == "Blue"
+    color_dict = {'Marc': 'Yellow', 'Ezri': 'Blue', 'Kris': 'Blue', 'Chris': 'Yellow', 'James': 'Blue'}
+    assert favorite_color(color_dict) == "Blue"
 
 
 def test_count_complex() -> None:

@@ -16,28 +16,30 @@ def invert(set_1: dict[str, str]) -> dict[str, str]:
     return set_2
 
 
-def favorite_color(color_list: dict[str, str]) -> str:
+def favorite_color(input_dict: dict[str, str]) -> str:
     """Returns the color that occurs most frequently."""
+    color_dict = dict()
     color: str = ""
-    color_count: int = 0
-    color_count_2: int = 0
 
-    for x in color_list:
-        color = color_list[x]
+    for x in input_dict:
 
-        if color_list[x] == color:
-            color_count += 1
+        if input_dict[x] in color_dict:  # if the value is in the list, then it's a duplicate
+            color_dict[input_dict[x]] += 1
         else:
-            color_count_2 += 1
-            color_2 = x
+            color_dict[input_dict[x]] = 1
 
-    if color_count >= color_count_2:
-        return color
-    if color_count <= color_count_2:
-        return color_list[color_2]
+    i: int = 0
+
+    for c in color_dict:
+        if color_dict[c] > i:
+            i = color_dict[c]
+            color = c
+
+    return color
 
 
 def count(input_list: list[str]) -> dict[str, int]:
+    """Counts how frequent a value appears in a list."""
     final_set = dict()
     
     for fruit in input_list:  # I use fruit in tests. It makes sense I promise.
@@ -47,7 +49,3 @@ def count(input_list: list[str]) -> dict[str, int]:
             final_set[fruit] = 1
         
     return final_set
-
-
-input_list = ["apple", "banana", "apple"]
-print(count(input_list))
