@@ -51,9 +51,14 @@ def head(data: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
         headers: list[str] = []
 
         i = 0
-        while i < rows:
-            headers.append(data[column][i])
-            i += 1
+        if rows > len(data):
+            while i < len(data):
+                headers.append(data[column][i])
+                i += 1
+        else: 
+            while i < rows:
+                headers.append(data[column][i])
+                i += 1
         result[column] = headers
 
     return result
