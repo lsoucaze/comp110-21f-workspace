@@ -109,10 +109,12 @@ def cs_course_response(subset: dict[str, list[str]], word: str) -> dict[str, lis
     results["AP_Principles"] = []
     results["difficulty"] = []
     
-    for i in range(len(subset["AP_A"])):
-        if subset["AP_A"][i] == "Yes" or subset["AP_Principles"][i] == "Yes":
-            results["AP_A"].append(subset["AP_A"][i])
-            results["AP_Principles"].append(subset["AP_Principles"][i])
-            results["difficulty"].append(subset["difficulty"][i])
+    for column in subset:
+
+        for i in range(len(subset[column])):
+            if subset[column][i] == word:
+                results["AP_A"].append(subset["AP_A"][i])
+                results["AP_Principles"].append(subset["AP_Principles"][i])
+                results["difficulty"].append(subset["difficulty"][i])
 
     return results
